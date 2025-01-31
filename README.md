@@ -7,7 +7,7 @@
 - **Next.js** – React framework for server-side rendering and static site generation
 - **Framer Motion** – High-performance animations for a sleek UI
 - **Tailwind CSS** – Utility-first styling for rapid development
-- **Acernity UI** – Beautiful icons for a polished look
+- **Acernity UI** – Beautiful UI for a polished look
 
 ## ✨ Features
 

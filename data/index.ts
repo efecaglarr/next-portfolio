@@ -61,6 +61,14 @@ export const projects = [
   {
     id: 2,
     title: "Pet Adoption Platform",
+    des: "A modern real estate platform built with the MERN stack (MongoDB, Express, React, Node.js), designed for seamless property listings, searches, and management.",
+    img: "/p2.png",
+    iconLists: ["/re.svg", "/mui.png", "/js.png"],
+    link: "https://petadopt-efecaglar.netlify.app/posts",
+  },
+  {
+    id: 2,
+    title: "Real Estate Site",
     des: "A MERN-based pet adoption platform connecting loving homes with pets in need through an intuitive and user-friendly experience.",
     img: "/p2.png",
     iconLists: ["/re.svg", "/mui.png", "/js.png"],
