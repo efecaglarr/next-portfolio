@@ -3,14 +3,14 @@ import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
-  gradientBackgroundStart = "rgb(248, 248, 255)", // Soft slate blue (almost white)  
-gradientBackgroundEnd = "rgb(224, 228, 234)",   // Cool slate gray  
-firstColor = "240, 245, 250",  // Pale slate (hint of blue)  
-secondColor = "220, 227, 235", // Misty slate  
-thirdColor = "200, 210, 220",  // Medium slate transition  
-fourthColor = "180, 190, 200", // Deeper slate for contrast  
-fifthColor = "220, 227, 235",  // Cycle back to misty slate  
-pointerColor = "160, 167, 180", // Subtle slate accent  
+  gradientBackgroundStart = "rgb(248, 248, 255)",
+  gradientBackgroundEnd = "rgb(224, 228, 234)",
+  firstColor = "240, 245, 250",
+  secondColor = "220, 227, 235",
+  thirdColor = "200, 210, 220",
+  fourthColor = "180, 190, 200",
+  fifthColor = "220, 227, 235",
+  pointerColor = "160, 167, 180",
   size = "100%",
   blendingValue = "screen",
   children,
@@ -39,30 +39,49 @@ pointerColor = "160, 167, 180", // Subtle slate accent
   const [curY, setCurY] = useState(0);
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
-  useEffect(() => {
-    document.body.style.setProperty(
-      "--gradient-background-start",
-      gradientBackgroundStart
-    );
-    document.body.style.setProperty(
-      "--gradient-background-end",
-      gradientBackgroundEnd
-    );
-    document.body.style.setProperty("--first-color", firstColor);
-    document.body.style.setProperty("--second-color", secondColor);
-    document.body.style.setProperty("--third-color", thirdColor);
-    document.body.style.setProperty("--fourth-color", fourthColor);
-    document.body.style.setProperty("--fifth-color", fifthColor);
-    document.body.style.setProperty("--pointer-color", pointerColor);
-    document.body.style.setProperty("--size", size);
-    document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+
+    if (typeof window !== "undefined") {
+      const body = document.body;
+      body.style.setProperty(
+        "--gradient-background-start",
+        gradientBackgroundStart
+      );
+      body.style.setProperty(
+        "--gradient-background-end",
+        gradientBackgroundEnd
+      );
+      body.style.setProperty("--first-color", firstColor);
+      body.style.setProperty("--second-color", secondColor);
+      body.style.setProperty("--third-color", thirdColor);
+      body.style.setProperty("--fourth-color", fourthColor);
+      body.style.setProperty("--fifth-color", fifthColor);
+      body.style.setProperty("--pointer-color", pointerColor);
+      body.style.setProperty("--size", size);
+      body.style.setProperty("--blending-value", blendingValue);
+    }
+  }, [
+    gradientBackgroundStart,
+    gradientBackgroundEnd,
+    firstColor,
+    secondColor,
+    thirdColor,
+    fourthColor,
+    fifthColor,
+    pointerColor,
+    size,
+    blendingValue,
+  ]);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
     function move() {
-      if (!interactiveRef.current) {
-        return;
-      }
+      if (!interactiveRef.current) return;
+
       setCurX(curX + (tgX - curX) / 20);
       setCurY(curY + (tgY - curY) / 20);
       interactiveRef.current.style.transform = `translate(${Math.round(
@@ -71,7 +90,7 @@ pointerColor = "160, 167, 180", // Subtle slate accent
     }
 
     move();
-  }, [tgX, tgY]);
+  }, [tgX, tgY, curX, curY, isMounted]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
@@ -83,9 +102,10 @@ pointerColor = "160, 167, 180", // Subtle slate accent
 
   const [isSafari, setIsSafari] = useState(false);
   useEffect(() => {
-    setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
+    if (typeof window !== "undefined") {
+      setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
+    }
   }, []);
-
   return (
     <div
       className={cn(
