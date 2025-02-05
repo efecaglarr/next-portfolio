@@ -52,7 +52,7 @@ export const projects = [
   {
     id: 1,
     title: "Car Rental Website",
-    des: "A MERN-based pet adoption platform connecting loving homes with pets in need through an intuitive and user-friendly experience.",
+    des: "A modern car rental platform built with Next.js, offering seamless booking and management for users.",
     img: "/p1.png",
     iconLists: ["/next-js.svg", "/tail.svg", "/ts.svg"],
     link: "https://dizginler-rent-a-car.vercel.app",
@@ -60,7 +60,7 @@ export const projects = [
   {
     id: 2,
     title: "Pet Adoption Platform",
-    des: "",
+    des: "A MERN-based pet adoption platform connecting loving homes with pets in need through an intuitive and user-friendly experience.",
     img: "/p2.png",
     iconLists: ["/re.svg", "/mui.png", "/js.png"],
     link: "https://petadopt-efecaglar.netlify.app/posts",
@@ -71,7 +71,7 @@ export const projects = [
     des: "A modern real estate platform built with the MERN stack (MongoDB, Express, React, Node.js), designed for seamless property listings, searches, and management.",
     img: "/p3.png",
     iconLists: ["/re.svg", "/scss.png", "/js.png"],
-    link: "https://real-estate-ns.vercel.app/",
+    link: "https://petadopt-efecaglar.netlify.app/posts",
   },
 ];
 
