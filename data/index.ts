@@ -71,7 +71,7 @@ export const projects = [
     des: "A modern real estate platform built with the MERN stack (MongoDB, Express, React, Node.js), designed for seamless property listings, searches, and management.",
     img: "/p3.png",
     iconLists: ["/re.svg", "/scss.png", "/js.png"],
-    link: "https://petadopt-efecaglar.netlify.app/posts",
+    link: "https://real-estate-ns.vercel.app/",
   },
 ];
 
@@ -89,8 +89,6 @@ export const socialMedia = [
     img: "/link.svg",
   },
 ];
-
-
 
 export const skills = [
   {
