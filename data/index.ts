@@ -66,7 +66,7 @@ export const projects = [
     link: "https://petadopt-efecaglar.netlify.app/posts",
   },
   {
-    id: 2,
+    id: 3,
     title: "Real Estate Site",
     des: "A modern real estate platform built with the MERN stack (MongoDB, Express, React, Node.js), designed for seamless property listings, searches, and management.",
     img: "/p3.png",
