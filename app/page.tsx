@@ -11,8 +11,8 @@ import Skillset from "@/components/Skillset";
 
 const Home = () => {
   return (
-    <main className="relative bg-white flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
+    <main className="relative bg-white flex justify-center items-center flex-col mx-auto sm:px-10 px-5">
+      <div className="max-w-7xl w-full min-h-[100vh]">
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />

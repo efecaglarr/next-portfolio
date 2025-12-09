@@ -10,7 +10,8 @@ import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
 const Skillset = () => {
   return (
-    <section id="testimonials" className="py-20">
+    <section id="testimonials" className="py-20 scroll-mt-[140px]">
+
       <h1 className="heading">
         <span className="text-purple">Skillset</span>
       </h1>

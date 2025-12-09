@@ -7,7 +7,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "Currently building a CRM System for Local Businesses",
+    title: "Currently Building an AI CRM system for health-tourism businesses",
     description: "Get the details",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -51,27 +51,19 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Car Rental Website",
-    des: "A modern car rental platform built with Next.js, offering seamless booking and management for users.",
+    title: "bewritten",
+    des: "A general platform designed to simplify how creators and industry experts collaborate, evaluate, and manage intellectual property.",
     img: "/p1.png",
     iconLists: ["/next-js.svg", "/tail.svg", "/ts.svg"],
-    link: "https://dizginler-rent-a-car.vercel.app",
+    link: "https://be-written.com",
   },
   {
     id: 2,
-    title: "Pet Adoption Platform",
-    des: "A MERN-based pet adoption platform connecting loving homes with pets in need through an intuitive and user-friendly experience.",
+    title: "BigAuthor",
+    des: "A book-centric platform tailored for authors and publishing professionals to collaborate efficiently.",
     img: "/p2.png",
     iconLists: ["/re.svg", "/mui.png", "/js.png"],
-    link: "https://petadopt-efecaglar.netlify.app/posts",
-  },
-  {
-    id: 3,
-    title: "Real Estate Site",
-    des: "A modern real estate platform built with the MERN stack (MongoDB, Express, React, Node.js), designed for seamless property listings, searches, and management.",
-    img: "/p3.png",
-    iconLists: ["/re.svg", "/scss.png", "/js.png"],
-    link: "https://real-estate-ns.vercel.app/",
+    link: "https://big-author.com",
   },
 ];
 

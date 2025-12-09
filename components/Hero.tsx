@@ -35,7 +35,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-950 max-w-80">
-            Turning Complex Ideas into Simple Solutions
+            I turn technical concepts into working products.
           </p>
 
           <TextGenerateEffect
@@ -44,7 +44,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-blue-950">
-            Hi! I&apos;m Efe, just a lifelong student
+            Hi! I&apos;m Efe, focused on building clean and efficient software.
           </p>
 
           <a href="#about">

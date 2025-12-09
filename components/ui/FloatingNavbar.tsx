@@ -1,3 +1,4 @@
+// FloatingNavbar.tsx
 "use client";
 import React, { useState } from "react";
 import {
@@ -46,16 +47,13 @@ export const FloatingNav = ({
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
+          initial={false}
+  animate={{
+    y: visible ? 0 : -100,
+    opacity: visible ? 1 : 0,
+  }}
+  transition={{
+    duration: 0.2,
         }}
         className={cn(
           // change rounded-full to rounded-lg
